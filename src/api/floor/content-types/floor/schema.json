@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "floors",
+  "info": {
+    "singularName": "floor",
+    "pluralName": "floors",
+    "displayName": "Floor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "shortDescription": {
+      "type": "string"
+    },
+    "number": {
+      "type": "integer"
+    },
+    "offices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::office.office"
+    }
+  }
+}
