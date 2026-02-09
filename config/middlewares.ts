@@ -5,19 +5,11 @@ export default [
     name: "strapi::cors",
     config: {
       origin: [
-        "https://niicoemporiio.github.io",
-        "http://localhost:5173",
-        "http://localhost:3000",
+        "https://niicoemporiio.github.io"
       ],
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-      headers: [
-        "Content-Type",
-        "Authorization",
-        "Origin",
-        "Accept",
-      ],
+      headers: ["Content-Type", "Authorization"],
       credentials: false,
-      keepHeaderOnError: true,
     },
   },
 
