@@ -5,14 +5,21 @@ export default [
     name: "strapi::cors",
     config: {
       origin: [
-        "http://127.0.0.1:5500",
+        "https://niicoemporiio.github.io",
         "http://localhost:5500",
-        "http://localhost:3000",
-        "https://niicoemporiio.github.io"
+        "http://127.0.0.1:5500",
+        "http://localhost:1337",
+        "https://backend-seba-b9yi.onrender.com",
+        /^https:\/\/.*\.ngrok-free\.dev$/,
       ],
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-      headers: ["Content-Type", "Authorization"],
-      keepHeaderOnError: true,
+      headers: [
+        "Content-Type",
+        "Authorization",
+        "Origin",
+        "Accept",
+      ],
+      credentials: true,
     },
   },
 
