@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offices",
+  "info": {
+    "singularName": "office",
+    "pluralName": "offices",
+    "displayName": "Office"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "sector": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "qr": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "contacts": {
+      "type": "component",
+      "component": "common.contact",
+      "repeatable": true
+    },
+    "floor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::floor.floor"
+    },
+    "state": {
+      "type": "enumeration",
+      "default": "ocupada",
+      "enum": [
+        "ocupada",
+        "libre",
+        "reservad"
+      ]
+    },
+    "qr_link": {
+      "type": "text"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "qr_main_url": {
+      "type": "string"
+    },
+    "qr_whatsapp_url": {
+      "type": "string"
+    },
+    "qr_extra_url": {
+      "type": "string"
+    },
+    "schedule_text": {
+      "type": "string"
+    }
+  }
+}
